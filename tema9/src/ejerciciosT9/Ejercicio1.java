@@ -12,7 +12,9 @@ import java.util.TreeSet;
 public class Ejercicio1 {
 
 	public static void main(String[] args) {
+		
 		TreeSet<Integer> coleccion = new TreeSet<>();
+		// Variable para el numero aleatorio
 		int numAleatorio;
 		
 		// Bucle while para recorrer la coleccion

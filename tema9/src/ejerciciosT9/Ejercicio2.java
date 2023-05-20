@@ -1,6 +1,8 @@
 package ejerciciosT9;
 
-import java.util.ArrayList;
+
+import java.util.LinkedHashSet;
+import java.util.Scanner;
 
 /*
  * Introduce por teclado, hasta que se introduzca “fin”, una serie de nombres, 
@@ -12,20 +14,29 @@ public class Ejercicio2 {
 
 	public static void main(String[] args) {
 		
-		ArrayList<String> nombres = new ArrayList<>();
-		Scanner sc = new Scanner 
+		// Usamos linked Hash Set porque no queremos que se guarden repetidos
+		LinkedHashSet <String> nombres = new LinkedHashSet<String>();
 		
-		String palabra = "";
-		System.out.println("Introduce la palabra");
-		// palabra = sc.next();
-		while (!palabra.equalsIgnoreCase("fin")) {
-			nombres.add(palabra);
+		Scanner sc = new Scanner(System.in);
+		// Variable vacía para el nombre
+		String nombre = "";
+
+		System.out.println("Escriba una serie de nombres para ir añadiendolos. Introduzca 'fin' para acabar ");
+		nombre = sc.next();
+		
+		// Mientras no se introduzca 'fin', seguimos pidiendo nombres
+		while (!nombre.equalsIgnoreCase("fin")) {
+			
+			// Añadimos nombres a la lista
+			nombres.add(nombre);
+			
+			// Volvemos a pedir
+			System.out.println("Escriba una serie de nombres para ir añadiendolos. Introduzca 'fin' para acabar ");
+			nombre = sc.next();
 		}
-		
 		System.out.println(nombres);
-		
-		
-		
+
+		sc.close();
 	}
 
 }
