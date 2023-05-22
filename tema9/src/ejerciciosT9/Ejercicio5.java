@@ -60,7 +60,7 @@ public class Ejercicio5 {
 			}
 			case 2 -> {
 				
-				// Pedimos el pinso
+				// Pedimos el nombre del producto a eliminar
 				sc.nextLine();
 				System.out.println("Introduzca el nombre del producto que quiere eliminar: ");
 				nombre = sc.nextLine();
@@ -99,7 +99,7 @@ public class Ejercicio5 {
 		System.out.println("PRODUCTOS \n");
 		System.out.println("1.Alta del producto.");
 		System.out.println("2.Baja del producto.");
-		System.out.println("3.Lista de existencias.");
+		System.out.println("3.Lista de productos.");
 		System.out.println("0.Salir.");
 
 	}
